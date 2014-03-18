@@ -1,6 +1,6 @@
 # GeorgiaHeroku
 
-TODO: Write a gem description
+Prepare Georgia CMS to be hosted on Heroku's platform
 
 ## Installation
 
@@ -18,7 +18,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Run the install generator to ready your app to Heroku.
 
 ## Contributing
 
