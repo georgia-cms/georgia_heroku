@@ -1,7 +1,37 @@
 ===============================================================================
 
-From now on, push to Heroku using this command:
+Add the following addons:
 
-$ rake georgia:heroku:deploy
+  heroku addons:add memcachier
+  heroku addons:add bonsai
+  heroku addons:add sendgrid
+  heroku addons:add cloudinary
+
+Add builpack to speed up deployment
+
+  heroku config:add BUILDPACK_URL=https://github.com/ndbroadbent/heroku-buildpack-turbo-sprockets.git
+
+Push to repository
+
+  git add . ; git commit -m "Herokuify"
+
+Push to Heroku
+
+  rake georgia:heroku:deploy
+
+Migrate Database
+
+  heroku run rake db:migrate
+
+Add elasticsearch indices
+
+  heroku run rake environment tire:import CLASS=Georgia::Page FORCE=true
+  heroku run rake environment tire:import CLASS=Ckeditor::Asset FORCE=true
+  heroku run rake environment tire:import CLASS=Ckeditor::Picture FORCE=true
+
+Add Admin user
+
+  heroku run rake db:seed
+
 
 ===============================================================================
