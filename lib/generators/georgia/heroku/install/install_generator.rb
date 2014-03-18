@@ -81,21 +81,14 @@ module Georgia
           gem 'cloudinary'
         end
 
-        def deploy
+        def deploy_config
           gem_group :assets do
             gem 'turbo-sprockets-rails3'
           end
         end
 
-        def heroku_setup
-          # run "heroku addons:add memcachier"
-          # run "heroku addons:add bonsai"
-          # run "heroku addons:add sendgrid"
-          # run "heroku addons:add cloudinary"
-          # run "heroku config:add BUILDPACK_URL=https://github.com/ndbroadbent/heroku-buildpack-turbo-sprockets.git"
-          # run "heroku run rake environment tire:import CLASS=Georgia::Page FORCE=true"
-          # run "heroku run rake environment tire:import CLASS=Ckeditor::Asset FORCE=true"
-          # run "heroku run rake environment tire:import CLASS=Ckeditor::Picture FORCE=true"
+        def bundle
+          run "bundle install"
         end
 
         def show_readme
