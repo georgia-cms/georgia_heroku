@@ -18,10 +18,6 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "georgia"
-  spec.add_dependency "tire"
-  spec.add_dependency "cloudinary"
-
   spec.add_development_dependency "bundler", "~> 1.5"
   spec.add_development_dependency "rake"
 end
