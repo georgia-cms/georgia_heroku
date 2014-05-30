@@ -20,6 +20,10 @@ Or install it yourself as:
 
 Run the install generator to ready your app to Heroku.
 
+```
+$ rails generate georgia:heroku:install
+```
+
 ## Contributing
 
 1. Fork it ( http://github.com/<my-github-username>/georgia_heroku/fork )
