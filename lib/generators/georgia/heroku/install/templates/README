@@ -29,7 +29,7 @@ Add elasticsearch indices
   heroku run rake environment tire:import CLASS=Ckeditor::Asset FORCE=true
   heroku run rake environment tire:import CLASS=Ckeditor::Picture FORCE=true
 
-Add Admin user
+Add a Georgia Admin User
 
   heroku run rake db:seed
 
